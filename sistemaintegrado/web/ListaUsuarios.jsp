@@ -80,22 +80,21 @@
                                                     </div>
                                                     </div>
                                                     <!---Aqui va el contenido de la pagina---->
-                                                    <h1>LISTADO DE SOLICITUDES</h1>
+                                                    <h1>USUARIOS</h1>
                                                     <br>
                                                     <br>
-                                                    <br>
+                                                    
+                                                    
                                                     <div class="table-responsive">
                                                     <table class="table table-hover table-condensed table-bordered">
                 <thead>
                     
-                <th>NOMBRE</th>
                 <th>IDENTIFICACION</th>
-                <th>DIRECCION</th>
-                <th>TELEFONO</th>
-                <th>EMAIL</th>
-                <th>CONTACTO</th>
+                <th>USARIO</th>
+                <th>NOMBRE</th>
+                <th>ROL</th>
                 <th>CONTRASEÑA</th>
-                
+               
                 <th class="text-center">OPCIONES</th>
                 </thead>
                 <tbody>
@@ -104,7 +103,7 @@
                 Connection cn = con.ObtenerConexion(); 
                 
                 Statement stm = cn.createStatement();
-                String query = "select * from clientes;";
+                String query = "select * from usuarios;";
                  ResultSet rs = stm.executeQuery(query);         
               %>      
                  </thead>
@@ -112,21 +111,15 @@
                     <%while (rs.next()) {%>
                     <tr>
                         
+                        <td> <%= rs.getString("id")%> </td>
+                        <td> <%= rs.getString("usuario")%> </td>
                         <td> <%= rs.getString("nombre")%> </td>
-                        <td> <%= rs.getString("nit")%> </td>
-                        <td> <%= rs.getString("direccion")%> </td>
-                        <td> <%= rs.getString("telefono")%> </td>
-                        <td> <%= rs.getString("email")%> </td>
-                        <td> <%= rs.getString("contacto")%> </td>
-                        <td> <%= rs.getString("password")%> </td>
+                        <td> <%= rs.getString("rol")%> </td>
+                        <td> <%= rs.getString("pss")%> </td>
+                        
                         <td>   
-                    
-                            
-                             
-                            <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizarEmpresa.jsp?idcliente=<%=rs.getInt("idcliente") %>&&nombre=<%= rs.getString("nombre")%>&&nit=<%= rs.getString("nit")%>&&direccion=<%= rs.getString("direccion")%>&&telefono=<%= rs.getString("telefono")%>&&email=<%= rs.getString("email")%>&&contacto=<%= rs.getString("contacto")%>&&password=<%= rs.getString("password")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
-                            <button type="button" class="btn btn-danger" onclick="confirm('Estas seguro de Eliminar el Registro'); location.reload(false)"> <a title="Eliminar" href="EliminarCliente?idcliente=<%=rs.getInt("idcliente") %>" ><span class="glyphicon glyphicon-remove"></span></a> </button>
-                               
-                            
+                             <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizarUsuario.jsp?idusuarios=<%= rs.getInt("idusuarios")%>&&id=<%=rs.getString("id")%>&&usuario=<%=rs.getString("usuario")%>&&nombre=<%=rs.getString("nombre")%>&&rol=<%=rs.getString("rol")%>&&pss=<%=rs.getString("pss")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
+                             <button type="button" class="btn btn-danger"> <a  title="Eliminar" href="Index.jsp" ><span class="glyphicon glyphicon-remove"></span></a> </button >
                         </td>
                         
                     </tr>   
@@ -136,7 +129,7 @@
             </table>
            
       </div>             
-                
+
 
                    <br>
                    <br>
@@ -148,17 +141,17 @@
 
 
 
-            <div class="row">
-                <div class="col-md-12">
-                    <img id="footer"  src="img/footer.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <img id="footer"  src="img/footer.png">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    </body>
-    </html>
+                                                    <script src="js/jquery.min.js"></script>
+                                                    <script src="js/bootstrap.min.js"></script>
+                                                    <script src="js/scripts.js"></script>
+                                                    </body>
+                                                    </html>

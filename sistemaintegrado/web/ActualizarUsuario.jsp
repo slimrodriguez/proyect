@@ -1,8 +1,9 @@
 <%-- 
-    Document   : RegistrosGenerales
-    Created on : 21-feb-2016, 15:05:18
+    Document   : ActualizarUsuario
+    Created on : 27-mar-2016, 21:33:35
     Author     : SHADY-
 --%>
+
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -103,16 +104,28 @@
                                             </div>
 
                                             </font>
-
-                                            <form class="form-horizontal" method="post" action="ServletRegistro" >
+                                            <%
+                                            
+                                            if(Integer.parseInt(request.getParameter("idusuarios"))!=0 && request.getParameter("id")!=null && request.getParameter("usuario") != null
+                                               && request.getParameter("nombre") != null && request.getParameter("rol") != null
+                                               && request.getParameter("pss")!=null){ 
+                                            }
+                                            
+                                            %>
+                                            
+                                            
+                                            <form class="form-horizontal" method="post" action="ActualizarUsuario" >
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-3">Identificacion:</label>
                                                     <div class="col-xs-9">
-                                                        <input type="text" class="form-control" id="inputEmail" placeholder="id" name="id" required><br>
+                                                        <input type="text" class="form-control"      name="id" value="<%=request.getParameter("id")%>" required><br>
+                                                        <input type="hidden" class="form-control"   name="idusuarios" value="<%=request.getParameter("idusuarios")%>" required><br>
+                                                    
+                                                    
                                                     </div>
                                                     <label class="control-label col-xs-3">NombreUsuario:</label>
                                                     <div class="col-xs-9">
-                                                        <input type="text" class="form-control" id="inputEmail" placeholder="usuario" name="usuario" required><br>
+                                                        <input type="text" class="form-control" id="inputEmail" placeholder="usuario" name="usuario" value="<%=request.getParameter("usuario")%>" required><br>
                                                     </div><br>
 
                                                 </div>
@@ -122,16 +135,32 @@
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-3">Nombre completo:</label>
                                                     <div class="col-xs-9">
-                                                        <input type="text" class="form-control" id="inputPassword" placeholder="nombre" name="nombre" required><br>
+                                                        <input type="text" class="form-control" id="inputPassword" placeholder="nombre" name="nombre"  value="<%=request.getParameter("nombre")%>" required><br>
                                                     </div>
                                                 </div>
 
                                                 <br></br>
-
                                                 <div class="form-group">
-                                                    <label class="control-label col-xs-3">Rol:</label><br>
+                                                    <label class="control-label col-xs-3">Contraseña</label>
                                                     <div class="col-xs-9">
-
+                                                        <input type="text" class="form-control"  value="<%=request.getParameter("pss")%>" ><br>
+                                                    </div>
+                                                </div>
+                                                <br><br>
+                                                 
+                                                 
+                                                    <div class="form-group">
+                                                    <label class="control-label col-xs-3">Rol Anterior</label>
+                                                    <div class="col-xs-9">
+                                                        <input type="text" class="form-control"  value="<%=request.getParameter("rol")%>" disabled><br>
+                                                    </div>
+                                                </div>
+                                                    
+                                                <br></br>
+                                                            <div class="form-group">
+                                                    <label class="control-label col-xs-3">Nuevo Rol:</label><br>
+                                                    <div class="col-xs-9">
+                                                          
                                                         <select name="rol">
                                                             <option value="Admin">--Administrador--</option> 
                                                             <option value="Asistente">--Asistente--</option> 
@@ -141,15 +170,12 @@
                                                         </select><br>
                                                     </div>
                                                 </div>
-
-                                                <br></br>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-3">Password:</label>
-                                                    <div class="col-xs-9">
-                                                        <input type="hidden" name="txtopcion" value="1">
-                                                        <input type="text" class="form-control" placeholder="Password" name="contrasena"><br>
-                                                    </div>
+                                                
+                                                
+                                               
+                                                
+                                                     <input type="hidden" name="txtopcion" value="1">
+                                                     <input type="hidden"  name="idusuarios" value="<%=request.getParameter("idusuarios")%>">
                                                 </div>
                                                 <br></br>
 
@@ -161,9 +187,9 @@
 
 
 
-                                                    <div class="col-xs-offset-3 col-xs-9">
-                                                        <input type="submit" class="btn btn-primary" value="Enviar">
-                                                        <input type="reset" class="btn btn-default" value="Limpiar">
+                                                    <div class="col-xs-offset-5 col-xs-7">
+                                                        <input type="submit" class="btn btn-primary" value="Actualizar">
+                                                        <button type="button" class="btn btn-default"><a href="ListaUsuarios.jsp">Cancelar</a></button>
 
                                                         
 

@@ -22,6 +22,7 @@ public class DaoUsuario extends ClassConex implements  interfaceCRUD{
     public boolean encontrado=false;
     public boolean listo = false;
     
+    public Integer idusuarios;
     public String id="";
     public String usuario="";
     public String nombre="";
@@ -86,7 +87,7 @@ public class DaoUsuario extends ClassConex implements  interfaceCRUD{
    
     public boolean actualizarRegistro() { //opcion 3.
         try {
-            st.executeUpdate("");
+            st.executeUpdate("UPDATE usuarios SET id="+id+",usuario="+usuario+",nombre="+nombre+",rol="+rol+",pss="+pass+" WHERE idusuarios="+idusuarios+"; ");
             listo=true;
            
         } catch (SQLException ex) {

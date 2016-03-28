@@ -50,7 +50,7 @@
                                                 <ul class="dropdown-menu">
                                                     <li><a href="RegistrosGenerales.jsp">Registros</a></li>
                                                     <li><a href="ListaSolicitudes.jsp">Solicitudes</a></li>
-                                                    <li><a href="">Lista usuarios</a></li>
+                                                    <li><a href="ListaUsuarios.jsp">Lista usuarios</a></li>
                                                        
 
                                                     </div>

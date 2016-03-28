@@ -10,7 +10,7 @@ package Modelo.Entidad;
  * @author adsi
  */
 public class BeanClientes {
-    
+   private Integer idcliente; 
    private String nombre;
    private String nit;
    private String direccion;
@@ -19,7 +19,9 @@ public class BeanClientes {
    private String contacto; 
    private String password;
 
-    public BeanClientes(String nombre, String nit, String direccion, String telefono, String email, String contacto, String password) {
+    public BeanClientes(Integer idcliente,String nombre, String nit, String direccion, String telefono, String email, String contacto, String password) {
+       
+        this.idcliente=idcliente;
         this.nombre = nombre;
         this.nit = nit;
         this.direccion = direccion;
@@ -84,8 +86,18 @@ public class BeanClientes {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public Integer getIdcliente() {
+        return idcliente;
+    }
+
+    public void setIdcliente(Integer idcliente) {
+        this.idcliente = idcliente;
+    }
     
-    
+      public BeanClientes(Integer idcliente) {
+        this.idcliente = idcliente;
+    }
     
     
     

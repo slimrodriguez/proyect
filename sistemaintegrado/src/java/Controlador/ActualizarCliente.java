@@ -5,25 +5,26 @@
  */
 package Controlador;
 
+import Modelo.Entidad.BeanClientes;
+import Modelo.Entidad.DaoClientes;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Modelo.Entidad.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import Controlador.*;
-import java.sql.Connection;
-import java.sql.Statement;
+
 /**
  *
  * @author SHADY-
  */
-@WebServlet(name = "ServletRegistro", urlPatterns = {"/ServletRegistro"})
-public class ServletRegistro extends HttpServlet {
+@WebServlet(name = "ActualizarCliente", urlPatterns = {"/ActualizarCliente"})
+public class ActualizarCliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,8 +37,7 @@ public class ServletRegistro extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+          try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
                ClassConex link = new ClassConex();
@@ -45,30 +45,35 @@ public class ServletRegistro extends HttpServlet {
                 
             Statement stm = cn.createStatement();
             
-                String usuario = "\""+request.getParameter("usuario")+"\"";
-                String nombre =  "\""+request.getParameter("nombre")+"\"";
-                String rol=  "\""+request.getParameter("rol")+"\"";
-                String pass=  "\""+request.getParameter("contrasena")+"\"";
-                String id=  "\""+request.getParameter("id")+"\"";
+                String nombre = "\""+request.getParameter("razon")+"\"";
+                String nit =  "\""+request.getParameter("nit")+"\"";
+                String direccion=  "\""+request.getParameter("direccion")+"\"";
+                String telefono=  "\""+request.getParameter("telefono")+"\"";
+                String email=  "\""+request.getParameter("email")+"\"";
+                String contacto=  "\""+request.getParameter("contacto")+"\"";
+                String contrasena=  "\""+request.getParameter("pass")+"\"";
+                Integer idcliente = Integer.parseInt(request.getParameter("idcliente"));
+                 
                 
+                 
                 
-                
+           
             
-             
-             BeanUsuario BCliente=new BeanUsuario(null,id,usuario,nombre,rol,pass);
-              DaoUsuario DCliente=new DaoUsuario(BCliente);
+             BeanClientes BCliente = new BeanClientes(idcliente,nombre, nit, direccion, telefono, email, contacto, contrasena);
+                
+              DaoClientes DCliente=new DaoClientes(BCliente);
               ResultSet rs;
             
               String mExito="Operacion exitosa, Felicidades!!!!"; 
               String mError="Operacion Fallida, Lo siento mucho!!!!";
          
          
-           // AGREGAR REGISTROS
-                if(DCliente.agregarRegistro()){
-                    request.setAttribute("mensaje", "Registro agregado exitosamente");
-                }else{request.setAttribute("mensaje", "El registro no se pudo guardar");}
+           // ACTUALIZAR REGISTROS
+                if(DCliente.actualizarRegistro()){
+                    request.setAttribute("mensaje", "Registro ACTUIALIZADO exitosamente");
+                }else{request.setAttribute("mensaje", "El registro no se pudo ACTUALIZAR");}
                 
-                request.getRequestDispatcher("RegistrosGenerales.jsp").forward(request, response);
+                request.getRequestDispatcher("ActualizarEmpresa.jsp").forward(request, response);
             
         
             }catch(SQLException e){
@@ -84,6 +89,8 @@ public class ServletRegistro extends HttpServlet {
                 
                 
         }
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -56,7 +56,7 @@ public class RegistroEmpresa extends HttpServlet {
                 
                 
             
-             BeanClientes BCliente = new BeanClientes(nombre, nit, direccion, telefono, email, contacto, telefono);
+             BeanClientes BCliente = new BeanClientes(null,nombre, nit, direccion, telefono, email, contacto, contrasena);
                 
               DaoClientes DCliente=new DaoClientes(BCliente);
               ResultSet rs;

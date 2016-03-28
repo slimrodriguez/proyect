@@ -10,14 +10,16 @@ package Modelo.Entidad;
  * @author SHADY-
  */
 public class BeanUsuario {
-    
+    private Integer idusuarios;
     private String id;
+
+  
     private String usuario;
     private String nombre;
     private String rol;
     private String pass;
 
-    public BeanUsuario(String id,String usuario, String nombre, String rol, String pass) {
+    public BeanUsuario(Integer idusuarios , String id,String usuario, String nombre, String rol, String pass) {
         this.id= id;
         this.usuario = usuario;
         this.nombre = nombre;
@@ -75,7 +77,18 @@ public class BeanUsuario {
     public void setPass(String pass) {
         this.pass = pass;
     }
+   
+    public BeanUsuario(Integer idusuarios) {
+        this.idusuarios = idusuarios;
+    }
 
+    public Integer getIdusuarios() {
+        return idusuarios;
+    }
+
+    public void setIdusuarios(Integer idusuarios) {
+        this.idusuarios = idusuarios;
+    }
    
   
 }

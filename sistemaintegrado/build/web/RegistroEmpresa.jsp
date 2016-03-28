@@ -54,7 +54,7 @@
                                     </div>
 
                                     <div>
-                                        <form action="" class="navbar-form navbar-right">
+                                        <form  class="navbar-form navbar-right">
 
                                             <a href="Login.jsp">
                                                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user">Ingresar</span></button>
@@ -81,7 +81,7 @@
                             </center>
                             </font>
                             <br></br>
-                            <div class="alert alert-info fade in">
+                            <%--<div class="alert alert-info fade in">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                 <h5>
                                     <% if (request.getAttribute("mensaje") != null) {%>
@@ -92,22 +92,36 @@
                                 </h5>
 
                             </div>
-
+                            --%>
+                            
+                            <div class="form-group">
+                                <div class="alert alert-danger text-center" style="display:none;" id="error">
+                                    <strong>Adventencia: </strong>Debe completar todos los campos
+                                </div>
+                                <div class="alert alert-success text-center" style="display:none;" id="exito">
+                                    <strong>Felicidades: </strong>Su registro ha sido guardado
+                                </div>  
+                            </div>
+                            
+                            
                             <form class="form-horizontal" method="post" action="RegistroEmpresa">
                                 <div class="form-group">
+                                <label for="requerido" class="control-label col-xs-3">Razon Social: </label>
+				<div class="col-xs-9">
+                                    <input type="text" id="requerido" class="form-control" name="razon">
+					<span class="help-block"></span>
 
-                                    <label class="control-label col-xs-3">Razón social: *</label>
-                                    <div class="col-xs-9">
-                                        <input type="textl" class="form-control"  name="razon">
-                                    </div>
+				</div>
+                                    
                                 </div>
 
 
                                 <div class="form-group">
                                     <br></br>
-                                    <label class="control-label col-xs-3">NIT *</label>
+                                    <label for="nit" class="control-label col-xs-3">NIT *</label>
                                     <div class="col-xs-9">
                                         <input type="text" class="form-control" id="inputEmail" name="nit">
+                                        <span class="help-block"></span>
                                     </div>
                                 </div>
 
@@ -116,53 +130,58 @@
                                 <br></br>
 
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3">Dirección: *</label>
+                                    <label for="requerido" class="control-label col-xs-3">Dirección: *</label>
                                     <div class="col-xs-9">
-                                        <input type="text" class="form-control" name="direccion">
+                                        <input type="requerido" class="form-control" name="direccion">
+                                        <span class="help-block"></span>
                                     </div>
                                 </div>
+                                
                                 <br></br>
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3" >Telefono: *</label>
+                                    <label for="telefono"class="control-label col-xs-3" >Telefono: *</label>
                                     <div class="col-xs-9">
-                                        <input type="text" class="form-control" name="telefono">
-                                    </div>
-                                </div>
-                                <br></br>
-
-                                <div class="form-group">
-                                    <label class="control-label col-xs-3" >Email: *</label>
-                                    <div class="col-xs-9">
-                                        <input type="email" class="form-control" id="inputEmail" name="email">
+                                        <input type="text" id="telefono" class="form-control" name="telefono">
+                                        <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <br></br>
 
+                                <div class="form-group">
+                                    <label for="email" class="control-label col-xs-3" >Email: *</label>
+                                    <div class="col-xs-9">
+                                        <input type="email" class="form-control" id="email" name="email">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <br></br>
+
 
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3" >Nombre de contacto: *</label>
+                                    <label for="requerido" class="control-label col-xs-3" >Nombre de contacto: *</label>
                                     <div class="col-xs-9">
-                                        <input type="text" class="form-control" name="contacto" required="">
+                                        <input id="requerido" type="text" class="form-control" name="contacto" onkeyup="validacion('codigo');" aria-describedby="inputSuccess2Status"> 
+                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <br></br>
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3" >Password: *</label>
+                                    <label  for="pass" class="control-label col-xs-3" >Password: *</label>
                                     <div class="col-xs-9">
-                                        <input type="password" class="form-control" name="pass">
+                                        <input type="password" class="form-control"  id="password" name="pass">
                                     </div>
                                 </div>
+                                
+                                
                                 <br></br>
 
                         </div>
                 </div>
-                <br></br>
-
                 <br>
 
                 <div class="form-group">
-                    <div class="col-xs-offset-3 col-xs-9">
-                        <input type="submit" class="btn btn-primary" value="Enviar ">
+                    <div class="col-xs-offset-6 col-xs-6">
+                        <input type="submit" class="btn btn-primary" id="enviar" value="Enviar ">
 
                     </div>
 
@@ -193,6 +212,6 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/scripts.js"></script>
+<script src="js/validarEmpresa.js"></script>
 </body>
 </html>

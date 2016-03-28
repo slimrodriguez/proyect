@@ -98,7 +98,7 @@
             
             <label class="control-label col-xs-3">Nombre : *</label>
             <div class="col-xs-9">
-                <input type="textl" class="form-control"  name="razon">
+                <input type="textl" class="form-control"  name="razon" value="<%=request.getParameter("nit")%>">
             </div>
             </div>
             

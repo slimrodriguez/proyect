@@ -26,6 +26,7 @@ public class DaoClientes extends ClassConex implements  interfaceCRUD{
     public boolean encontrado=false;
     public boolean listo = false;
     
+   private Integer idcliente;
    private String nombre;
    private String nit;
    private String direccion;
@@ -46,7 +47,7 @@ public class DaoClientes extends ClassConex implements  interfaceCRUD{
         try {
             conn = this.ObtenerConexion();
             st = conn.createStatement();
-            
+                idcliente=bcliente.getIdcliente();
                 nombre = bcliente.getNombre();
                 nit=bcliente.getNit();
                 direccion=bcliente.getDireccion();
@@ -84,7 +85,7 @@ public class DaoClientes extends ClassConex implements  interfaceCRUD{
     public boolean borrarRegistro() {// opcion 2.
         try {
             
-            st.executeUpdate("delete from cliente where id_cliente='"+nombre+"';");
+            st.executeUpdate("DELETE from clientes WHERE idcliente='"+idcliente+"';");
             listo=true;
             conn.close();
         } catch (SQLException ex) {
@@ -97,7 +98,7 @@ public class DaoClientes extends ClassConex implements  interfaceCRUD{
    
     public boolean actualizarRegistro() { //opcion 3.
         try {
-            st.executeUpdate("");
+            st.executeUpdate("UPDATE clientes SET nombre="+nombre+",nit="+nit+",direccion="+direccion+",telefono="+telefono+",email="+email+",contacto="+contacto+",password="+password+" WHERE idcliente="+idcliente+"; ");
             listo=true;
            
         } catch (SQLException ex) {

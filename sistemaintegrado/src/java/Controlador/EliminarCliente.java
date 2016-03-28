@@ -5,25 +5,24 @@
  */
 package Controlador;
 
+
+import Modelo.Entidad.BeanClientes;
+import Modelo.Entidad.DaoClientes;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Modelo.Entidad.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import Controlador.*;
-import java.sql.Connection;
-import java.sql.Statement;
+
 /**
  *
  * @author SHADY-
  */
-@WebServlet(name = "ServletRegistro", urlPatterns = {"/ServletRegistro"})
-public class ServletRegistro extends HttpServlet {
+@WebServlet(name = "EliminarCliente", urlPatterns = {"/EliminarCliente"})
+public class EliminarCliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,54 +35,25 @@ public class ServletRegistro extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            
-               ClassConex link = new ClassConex();
-            try{Connection cn = link.ObtenerConexion(); 
+       
+        Integer idcliente = Integer.parseInt(request.getParameter("idcliente"));
+        BeanClientes BCliente = new BeanClientes(idcliente);
                 
-            Statement stm = cn.createStatement();
-            
-                String usuario = "\""+request.getParameter("usuario")+"\"";
-                String nombre =  "\""+request.getParameter("nombre")+"\"";
-                String rol=  "\""+request.getParameter("rol")+"\"";
-                String pass=  "\""+request.getParameter("contrasena")+"\"";
-                String id=  "\""+request.getParameter("id")+"\"";
-                
-                
-                
-            
-             
-             BeanUsuario BCliente=new BeanUsuario(null,id,usuario,nombre,rol,pass);
-              DaoUsuario DCliente=new DaoUsuario(BCliente);
+              DaoClientes DCliente=new DaoClientes(BCliente);
               ResultSet rs;
             
               String mExito="Operacion exitosa, Felicidades!!!!"; 
               String mError="Operacion Fallida, Lo siento mucho!!!!";
          
          
-           // AGREGAR REGISTROS
-                if(DCliente.agregarRegistro()){
-                    request.setAttribute("mensaje", "Registro agregado exitosamente");
-                }else{request.setAttribute("mensaje", "El registro no se pudo guardar");}
+           // Eliminar REGISTROS
+                if(DCliente.borrarRegistro()){
+                    request.setAttribute("mensaje", "Registro ELIMINADO exitosamente");
+                }else{request.setAttribute("mensaje", "El registro no se pudo ELIMINAR");}
                 
-                request.getRequestDispatcher("RegistrosGenerales.jsp").forward(request, response);
-            
+                request.getRequestDispatcher("ListaSolicitudes.jsp").forward(request, response);
         
-            }catch(SQLException e){
-            
-            e.printStackTrace();}
-              
-                
-                
-                
-                
-                
-                
-                
-                
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
