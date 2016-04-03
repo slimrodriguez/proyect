@@ -68,81 +68,86 @@
                         </div>
                     </div>
                     <!---Aqui va el contenido de la pagina---->
-                    <center><font color="black" size="6"  face="arial" align="justify" >Registro Motorista</font></font></center>
+                    <center><font color="black" size="6"  face="arial" align="justify" >Registro Camion</font></font></center>
 
-
+                            <br> </br>
+                            <br> </br>
+                    <table border='0px' width='100%' height='100px' align='center'>
                     <div class="container">
-                        <img src="img/perfil.jpg" style="float:right;"/>
-
-                        <form   class="form-inline" role="form" method="post" action="ServletConductor">
+                       
+                        
+                        <form   class="form-horizontal" role="form" method="post" action="ServletCamion">
                             <div class="form-group">
-                                <label class="control-label">
-                                    <div class="col-xs-3">
-                                        Nombre: <input class="form-control" type="text" name="nombre" />
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">
-                                    <div class="col-xs-3">
-                                        Apellidos: <input class="form-control" type="text" name="apellido" />
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">
-                                    <div class="col-xs-3">
-                                        cedula: <input class="form-control" type="text" name="cedula" />
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">
-                                    <div class="col-xs-3">
-                                        Direccio: <input class="form-control" type="text" name="direccion" />
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">
-                                    <div class="col-xs-3">
-                                        Teléfono: <input class="form-control" type="text" name="telefono" />
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">
-                                    <div class="col-xs-3">
-                                        Celular: <input class="form-control" type="text" name="celular" />
-                                    </div>
-                                </label>
-                            </div>
-                            <br>
-                            <br>
-                           
-                            <div class="form-group">
-                                <label class="control-label">
+                                <label class="control-label col-xs-3"> 
                                     <div class="col-xs-9">
-                                        Categoria: <select class="form-control"  name="categoria">
-                                            <option value="seleccionar categoria">seleccionar categoria</option> 
-                                            <option value="A2">A2</option> 
-                                            <option value="B1" >B1</option>
-                                            <option value="B2">B2</option>
-                                            <option value="B3">B3</option>
-                                            <option value="C1">C1</option>
-                                            <option value="C2">C2</option>
-                                            <option value="C3">C3</option>
+                                        Color:<input class="form-control " type="text" name="color" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">
+                                    <div class="col-xs-9">
+                                        Marca: <input class="form-control " type="text" name="marca" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">
+                                    <div class="col-xs-9">
+                                        Linea: <input class="form-control " type="text" name="linea" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">
+                                    <div class="col-xs-9">
+                                        Modelo: <input class="form-control " type="text" name="modelo" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">
+                                    <div class="col-xs-9">
+                                        NroMotor: <input class="form-control " type="text" name="nromotor" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">
+                                    <div class="col-xs-9">
+                                        NroChasis:<input class="form-control " type="text" name="nrochasis" />
+                                    </div>
+                                </label>
+                            </div><div class="form-group">
+                                <label class="control-label col-xs-3">
+                                    <div class="col-xs-9">
+                                        Placa:<input class="form-control " type="text" name="placa" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">
+                                    <div class="col-xs-9">
+                                        Soat: <select class="form-control "  name="soat">
+                                            <option value="seleccionar">seleccionar</option> 
+                                            <option value="Activo">Activo</option> 
+                                            <option value="Vencido" >Vencido</option>
                                         </select>
                                     </div>
                                 </label>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">
+                               <div class="form-group">
+                                <label class="control-label col-xs-3">
                                     <div class="col-xs-9">
-                                        vencimiento:<input class="form-control" type="date" name="vencimiento" />
+                                        Tecnomecanica: <select class="form-control "  name="tecnomecanica">
+                                            <option value="seleccionar">seleccionar</option> 
+                                            <option value="Activo">Activo</option> 
+                                            <option value="Vencido" >Vencido</option>
+                                        </select>
                                     </div>
                                 </label>
                             </div>
+                           
                             <br> </br>
 
                             <br> </br>
@@ -175,7 +180,7 @@
             </div>
 
         </center>
-
+</table>
         <br> </br>
 
 

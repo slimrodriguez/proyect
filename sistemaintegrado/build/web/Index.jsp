@@ -39,11 +39,11 @@
                                             <li><a href="Instalaciones.jsp"><span class="glyphicon glyphicon-globe"></span> Instalaciones</a></li>
                                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-info-sign"></span> Nuestros Servicios<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="granel.jsp">Transporte a Granel</a></li>
-                                                    <li><a href="contenedor.jsp">Transporte Contenedorizada</a></li>
+                                                    <li><a href="Granel.jsp">Transporte a Granel</a></li>
+                                                    <li><a href="Contenedor.jsp">Transporte Contenedorizada</a></li>
 
                                                 </ul>
-                                            <li><a href="contacto.jsp"><span class="glyphicon glyphicon-envelope"> </span> Contáctenos</a></li>
+                                            <li><a href="Contacto.jsp"><span class="glyphicon glyphicon-envelope"> </span> Contáctenos</a></li>
 
                                         </ul>
                                     </div>
@@ -151,7 +151,7 @@
                                                 </div>
                                                 </p>
                                                 <p>
-                                                    <a  class="btn btn-primary" href="contacto.html">Ver Mapa</a> 
+                                                    <a  class="btn btn-primary" href="contacto1.html">Ver Mapa</a> 
                                                 </p>
                                             </div>
                                         </div>
