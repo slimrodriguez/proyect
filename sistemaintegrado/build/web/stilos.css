@@ -2,7 +2,7 @@ nav.navbar ul.nav li {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 110%;
 }
- 
+
 /* cambiar el color de fondo a la barra */
 nav.navbar {
     background-color: #181B1F;
@@ -10,21 +10,20 @@ nav.navbar {
 
 
 #logo{
-
-	padding: 2em 2em 2em 2em;
-	height: 230px;
-
+    
+    padding: 0.1em 0 0em 0;
+    height: 230px;
 }
 
 
 #banner{
-	padding-left: 10em;
+    padding-left: 10em;
 }
 
 
 
 #tumble{
-	margin-top: 4em;
+    margin-top: 4em;
     margin-right: 80px ;
     margin-left: 80px;
 
@@ -33,41 +32,41 @@ nav.navbar {
 
 #footer{
 
-	width: 100%;
+    width: 100%;
 }
 
 
 IMG.imgcenter{
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      border:none;
-      } 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:none;
+} 
 
 logo{padding: 2em 2em 2em 2%;}
 
- #container1{width:800px;}
+#container1{width:800px;}
 
 #container2{width:1000px;}
 
 #login{
-  background-color: #D7D4D4;
+    background-color: #D7D4D4;
 }
 
 #cliente{
-     text-align:center;
+    text-align:center;
     border-bottom: 1px solid;
-   
-    
+
+
 }
 
 #ContCliente{
     margin:2em 5em 2em 5em;
     background-color:#DDDDDD;
-    
+
 }
 
 #container1{
-text-align:"center";
-    
+    text-align:"center";
+
 }

@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/js/validarEmpresa.js</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/validar.jsp</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/Login.jsp</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/EjValidador.jsp</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/js/bootstrapValidator.min.js</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/ActualizarEmpresa.jsp</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/js/validator.js</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/src/java/Controlador/EliminarCliente.java</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/web/ListaSolicitudes.jsp</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/src/java/Modelo/Entidad/BeanPedido.java</file>
-            <file>file:/media/adsi/FC/proyect1/sistemaintegrado/src/java/Modelo/Entidad/DaoPedido.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

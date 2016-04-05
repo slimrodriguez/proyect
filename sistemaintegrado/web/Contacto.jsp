@@ -78,6 +78,7 @@
                         <br> </br>
 
                         <table border='0px' width='100%' height='100px' align='center'>
+                            
                             <div  style='width:700px ;margin:0 auto; margin-top:1em; margin-bottom:.1em'>
 
 
@@ -160,11 +161,11 @@
 
 
                                 </form>
-
+                              
                                 <br> </br>
                                 <br> </br>
 
-
+                                
                                 <center><font color="black" size="6"  face="arial" >¿Dónde nos Ubicamos? </font></center>
 
 
@@ -174,7 +175,7 @@
                                         e4683c0ddf5b307%3A0x711715069fd1c955!2sSabaneta%2C+Antioquia!5e0!3m2!1ses!2sco!4v1444896381296" 
                                         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-
+                               
                         </table>
 
 

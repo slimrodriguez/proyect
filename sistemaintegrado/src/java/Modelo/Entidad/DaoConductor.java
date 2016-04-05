@@ -27,7 +27,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
     public boolean encontrado=false;
     public boolean listo = false;
     
-    
+    public Integer idconductores;
     public String nombre="";
     public String apellido="";
     public String cedula="";
@@ -49,7 +49,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
             conn = this.ObtenerConexion();
             st = conn.createStatement();
             
-            
+            idconductores = bconductor.getIdconductores(); 
             nombre    = bconductor.getNombre();
             apellido   = bconductor.getApellido();
             cedula  = bconductor.getCedula();

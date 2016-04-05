@@ -133,14 +133,9 @@
                         <td>   
                     
                     
-                    
-                    
-                            <form action="CRUD" method="POST">
-                                <div class="text-center">
-                                    <input class="btn btn-primary" type="submit" value="EDITAR" name="edit">
-                                    <input class="btn btn-danger" type="submit" value="ELIMINAR" name="delete">
-                                </div>
-                            </form>
+                            <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizarConductor.jsp?idconductores=<%=rs.getInt("idconductores") %>&&nombre=<%= rs.getString("nombre")%>&&apellido=<%= rs.getString("apellido")%>&&cedula=<%= rs.getString("cedula")%>&&direccion=<%= rs.getString("direccion")%>&&telefono=<%= rs.getString("telefono")%>&&celular=<%= rs.getString("celular")%>&&categoria=<%= rs.getString("categoria")%>&&vencimiento=<%= rs.getString("vencimiento")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
+                            <button type="button" class="btn btn-danger" onclick="confirm('Estas seguro de Eliminar el Registro'); location.reload(false)"> <a title="Eliminar" href="EliminarConductor?idcliente=<%=rs.getInt("idconductores") %>" ><span class="glyphicon glyphicon-remove"></span></a> </button>
+                            
                         </td>
                         
                     </tr>   

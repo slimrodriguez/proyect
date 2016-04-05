@@ -23,14 +23,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <img id="logo" alt="Trasportes Urimar" src="img/banner4.jpg" width="100%" height="100%">
+                    <img id="logo"  alt="Trasportes Urimar" src="img/banner4.jpg" width="100%" height="100%">
                     <div class="row">
                         <div class="col-md-12">
-
                             <nav class="navbar navbar-inverse">
                                 <div class="container-fluid">
                                     <div class="navbar-header">
-                                        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-th"> URIMAR</span></a>
+                                        <a class="navbar-brand" href=""><span class="glyphicon glyphicon-th"> URIMAR</span></a>
                                     </div>
                                     <div>
                                         <ul class="nav navbar-nav">
@@ -50,9 +49,6 @@
 
                                     <div>
                                         <form action="" class="navbar-form navbar-right">
-                                            
-
-
                                             <a href="Login.jsp"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"> Ingresar</span></button></a>
                                             <a href="TipoRegistro.jsp"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-open-file"> Registro</span></button></a>
                                         </form>
@@ -65,114 +61,115 @@
                         </div>
                     </div>
 
-                  
-                    <div class="container-fluid">
-                        <div class="row">
+                    <center>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-10">
+                                    <script type="text/javascript">
+                                        var bannersnack_embed = {"hash": "bcjax26qk", "width": 1000, "height": 250, "t": 1442201640, "userId": 20756266, "wmode": "transparent"};
+                                    </script>
+                                    <script type="text/javascript" src="http://files.bannersnack.com/iframe/embed.js"></script></div>	 
+
+                            </div>
                             <div class="col-md-1">
                             </div>
-                            <div class="col-md-10">
-                                <script type="text/javascript">
-                                       var bannersnack_embed = {"hash":"bcjax26qk","width":950,"height":250,"t":1442201640,"userId":20756266,"wmode":"transparent"};
-                                </script>
-                                <script type="text/javascript" src="http://files.bannersnack.com/iframe/embed.js"></script></div>	 
-                            
                         </div>
-                        <div class="col-md-1">
-                        </div>
-                    </div>
+                    </center>
                 </div>
-                    
-                     <br>
-                     <br>
-                    <div id="tumble" class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail First" src="img/noticia.jpg" />
-                                            <div class="caption">
-                                                <h3 align="center">
-                                                    Noticias
-                                                </h3>
 
-                                                <p>Nuestro Compromiso Con la Seguridad en el Transporte</p>
+                <br>
+                <br>
+                <div id="tumble" class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img alt="Bootstrap Thumbnail First" src="img/noticia.jpg" />
+                                        <div class="caption">
+                                            <h3 align="center">
+                                                Noticias
+                                            </h3>
 
-                                                <p>Transportes Urimar S.A.S  consciente de su responsabilidad Social y Empresarial, busca satisfacer los requerimientos de todas las partes interesadas, para lo cual y por iniciativa propia, evaluando el entorno comercial nacional e internacional 
-                                                </p>
+                                            <p>Nuestro Compromiso Con la Seguridad en el Transporte</p>
 
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Ver mas</a> 
-                                                </p>
-                                            </div>
+                                            <p>Transportes Urimar S.A.S  consciente de su responsabilidad Social y Empresarial, busca satisfacer los requerimientos de todas las partes interesadas, para lo cual y por iniciativa propia, evaluando el entorno comercial nacional e internacional 
+                                            </p>
+
+                                            <p>
+                                                <a class="btn btn-primary" href="#">Ver mas</a> 
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="que hacemos" src="img/hacemos.jpg" >
-                                            <div class="caption">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img alt="que hacemos" src="img/hacemos.jpg" >
+                                        <div class="caption">
+                                            <br>
+
+                                            <h3 align="center">
+                                                ¿Qué hacemos?
+                                            </h3>
+                                            <p>
+                                                Como Operadores Logísticos, implementamos, operamos y desarrollamos servicios logísticos para el abastecimiento de materias primas a plantas de producción; almacenamiento y distribución de producto terminado al consumidor final, buscando eficiencia y el menor costo.
+                                                Transportamos materias primas y productos terminados con entregas directas o a través de plataformas de Cross Docking hasta las instalaciones de los clientes finales.
+                                            </p>
+                                            <p>
+                                                <a class="btn btn-primary"  href="#">Ver mas</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img alt="Contactenos" src="img/contactenos.jpg" />
+                                        <div class="caption">
+                                            <b><h2 align="center">
+                                                    Contacto
+                                                </h2></b>
+                                            <p>
                                                 <br>
-
-                                                <h3 align="center">
-                                                    Que hacemos
-                                                </h3>
-                                                <p>
-                                                    Como Operadores Logísticos, implementamos, operamos y desarrollamos servicios logísticos para el abastecimiento de materias primas a plantas de producción; almacenamiento y distribución de producto terminado al consumidor final, buscando eficiencia y el menor costo.
-                                                    Transportamos materias primas y productos terminados con entregas directas o a través de plataformas de Cross Docking hasta las instalaciones de los clientes finales.
-                                                </p>
-                                                <p>
-                                                    <a class="btn btn-primary"  href="#">Ver mas</a> 
-                                                </p>
+                                            <div align="center" >
+                                                <h4><p><b>Telefonos</b></p></h4>
+                                                <br>
+                                                <p><b>PBX:</b>  288 58 08</p>
+                                                <p><b>FAX:</b>  301 45 43</p>
+                                                <br>
+                                                <p><b>Direccion</b></p>
+                                                <p>Calle 10 #11 09 Sur 25 (Sabaneta Antioquia) </p>
+                                                <br>
+                                                <b><p>Email</p></b>
+                                                <p><a href="">trurimar@une.net.co</a></p>
+                                                <br>
+                                                <br>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Contactenos" src="img/contactenos.jpg" />
-                                            <div class="caption">
-                                                <b><h2 align="center">
-                                                        Contacto
-                                                    </h2></b>
-                                                <p>
-                                                    <br>
-                                                <div align="center" >
-                                                    <h4><p><b>Telefonos</b></p></h4>
-                                                    <br>
-                                                    <p><b>PBX:</b>  288 58 08</p>
-                                                    <p><b>FAX:</b>  301 45 43</p>
-                                                    <br>
-                                                    <p><b>Direccion</b></p>
-                                                    <p>Calle 10 #11 09 Sur 25 (Sabaneta Antioquia) </p>
-                                                    <br>
-                                                    <b><p>Email</p></b>
-                                                    <p><a href="">trurimar@une.net.co</a></p>
-                                                    <br>
-                                                    <br>
-                                                </div>
-                                                </p>
-                                                <p>
-                                                    <a  class="btn btn-primary" href="contacto1.html">Ver Mapa</a> 
-                                                </p>
-                                            </div>
+                                            </p>
+                                            <p>
+                                                <a  class="btn btn-primary" href="contacto1.html">Ver Mapa</a> 
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="img/basclogo.png"></img>
-                            <img id="footer" alt="Bootstrap Image Preview" src="img/footer.png">
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="img/basclogo.png"></img>
+                        <img id="footer" alt="Bootstrap Image Preview" src="img/footer.png">
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
 </html>

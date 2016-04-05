@@ -7,7 +7,7 @@ package Modelo.Entidad;
  */
 public class BeanConductor {
     
-    
+    private Integer idconductores; 
     private String nombre;
     private String apellido;
     private String cedula;
@@ -16,8 +16,9 @@ public class BeanConductor {
     private String celular;
     private String categoria;
     private String vencimiento;
-    public BeanConductor(String nombre, String apellido, String cedula, String direccion, String telefono,String celular, String categoria, String vencimiento ) {
+    public BeanConductor(Integer idconductores,String nombre, String apellido, String cedula, String direccion, String telefono,String celular, String categoria, String vencimiento ) {
         
+        this.idconductores = idconductores;
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -27,7 +28,22 @@ public class BeanConductor {
         this.vencimiento = vencimiento;
         this.celular = celular;
     }
- 
+
+    public BeanConductor(Integer idconductores) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public BeanConductor(String nombre, String apellido, String cedula, String direccion, String telefono, String celular, String categoria, String vencimiento) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Integer getIdconductores() {
+        return idconductores;
+    }
+
+    public void setIdconductores(Integer idconductores) {
+        this.idconductores = idconductores;
+    }
    
 
     public String getNombre() {
