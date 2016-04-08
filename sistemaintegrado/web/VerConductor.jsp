@@ -97,6 +97,7 @@
             <br>
             <table class="table table-hover table-condensed table-bordered">
                 <thead>
+                <th>NUMERO CONDUCTOR</th>
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
                 <th>CEDULA</th>
@@ -121,6 +122,7 @@
                 <tbody>
                     <%while (rs.next()) {%>
                     <tr>
+                        <td> <%= rs.getString("idconductores")%> </td>
                         <td> <%= rs.getString("nombre")%> </td>
                         <td> <%= rs.getString("apellido")%> </td>
                         <td> <%= rs.getString("cedula")%> </td>

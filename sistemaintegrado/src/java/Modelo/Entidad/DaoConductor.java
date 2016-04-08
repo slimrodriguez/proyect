@@ -9,9 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import Modelo.Entidad.interfaceCRUD;
 import Controlador.*;
-import Modelo.Entidad.DaoPedido;
-import Modelo.Entidad.DaoPedido;
-import Modelo.Entidad.DaoPedido;
+import Modelo.Entidad.DaoConductor;
 import Modelo.Entidad.interfaceCRUD;
 import Modelo.Entidad.interfaceCRUD;
 import Modelo.Entidad.interfaceCRUD;
@@ -27,7 +25,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
     public boolean encontrado=false;
     public boolean listo = false;
     
-    public Integer idconductores;
+    public String idconductores;
     public String nombre="";
     public String apellido="";
     public String cedula="";
@@ -73,11 +71,11 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
 
     public boolean agregarRegistro() { //opcion 1.
         try {
-            st.executeUpdate("INSERT INTO Condutores (nombre,apellido,cedula,direccion,telefono,celular,categoria,vencimiento)" + "values ("+nombre+","+apellido+","+cedula+","+direccion+","+telefono+","+celular+","+categoria+","+vencimiento+");");
+            st.executeUpdate("INSERT INTO Condutores (idconductores,nombre,apellido,cedula,direccion,telefono,celular,categoria,vencimiento)" + "values ("+idconductores+","+nombre+","+apellido+","+cedula+","+direccion+","+telefono+","+celular+","+categoria+","+vencimiento+");");
             listo=true;
             System.out.print(st);
         } catch (SQLException ex) {
-            Logger.getLogger(DaoPedido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoConductor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return listo;
     }
@@ -86,11 +84,11 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
     public boolean borrarRegistro() {// opcion 2.
         try {
             
-            st.executeUpdate("delete from cedula where id_cedula='"+cedula+"';");
+            st.executeUpdate("delete from Condutores where idconductores;");
             listo=true;
             conn.close();
         } catch (SQLException ex) {
-            Logger.getLogger(DaoPedido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoConductor.class.getName()).log(Level.SEVERE, null, ex);
       
         }
         return listo;
@@ -103,7 +101,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
             listo=true;
            
         } catch (SQLException ex) {
-            Logger.getLogger(DaoPedido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoConductor.class.getName()).log(Level.SEVERE, null, ex);
       
         }
         return listo;
@@ -114,7 +112,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
          try {        
             rs = st.executeQuery("SELECT id_cliente,nom_cliente,ape_cliente, genero_cliente  FROM cliente where id_cliente='';");
         } catch (SQLException ex) {
-            Logger.getLogger(DaoPedido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoConductor.class.getName()).log(Level.SEVERE, null, ex);
         }
          return rs;
     }

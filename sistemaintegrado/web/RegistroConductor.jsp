@@ -78,6 +78,13 @@
                             <div class="form-group">
                                 <label class="control-label">
                                     <div class="col-xs-3">
+                                        Conductor nro:: <input class="form-control" type="text" name="idconductores" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <div class="col-xs-3">
                                         Nombre: <input class="form-control" type="text" name="nombre" />
                                     </div>
                                 </label>

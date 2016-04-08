@@ -48,7 +48,7 @@ public class ServletConductor extends HttpServlet {
                 
             Statement stm = cn.createStatement();
             
-                
+                String idconductores =  "\""+request.getParameter("idconductores")+"\"";
                 String nombre =  "\""+request.getParameter("nombre")+"\"";
                 String apellido=  "\""+request.getParameter("apellido")+"\"";
                 String cedula=  "\""+request.getParameter("cedula")+"\"";
@@ -58,7 +58,7 @@ public class ServletConductor extends HttpServlet {
                 String categoria=  "\""+request.getParameter("categoria")+"\"";
                 String vencimiento=  "\""+request.getParameter("vencimiento")+"\"";
                 
-              BeanConductor BcConductor = new BeanConductor(nombre,apellido,cedula,direccion,telefono,celular,categoria,vencimiento);
+              BeanConductor BcConductor = new BeanConductor(idconductores,nombre,apellido,cedula,direccion,telefono,celular,categoria,vencimiento);
               DaoConductor DcConductor=new DaoConductor(BcConductor);
               ResultSet rs; 
              

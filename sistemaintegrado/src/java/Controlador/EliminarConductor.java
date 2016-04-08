@@ -36,23 +36,17 @@ public class EliminarConductor extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        Integer idconductores = Integer.parseInt(request.getParameter("idconductores"));
-        BeanConductor BConductor = new BeanConductor(idconductores);
+        
+        
                 
-              DaoConductor DConductor=new DaoConductor(BConductor);
+         
               ResultSet rs;
             
               String mExito="Operacion exitosa, Felicidades!!!!"; 
               String mError="Operacion Fallida, Lo siento mucho!!!!";
          
          
-           // Eliminar REGISTROS
-                if(DConductor.borrarRegistro()){
-                    request.setAttribute("mensaje", "Registro ELIMINADO exitosamente");
-                }else{request.setAttribute("mensaje", "El registro no se pudo ELIMINAR");}
-                
-                request.getRequestDispatcher("VerConductor.jsp").forward(request, response);
-        
+           // El
         
     }
 
