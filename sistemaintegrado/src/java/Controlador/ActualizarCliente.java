@@ -70,10 +70,10 @@ public class ActualizarCliente extends HttpServlet {
          
            // ACTUALIZAR REGISTROS
                 if(DCliente.actualizarRegistro()){
-                    request.setAttribute("mensaje", "Registro ACTUIALIZADO exitosamente");
+                    request.setAttribute("mensaje", "Registro ACTUALIZADO exitosamente");
                 }else{request.setAttribute("mensaje", "El registro no se pudo ACTUALIZAR");}
                 
-                request.getRequestDispatcher("ActualizarEmpresa.jsp").forward(request, response);
+                request.getRequestDispatcher("ListaSolicitudes.jsp").forward(request, response);
             
         
             }catch(SQLException e){

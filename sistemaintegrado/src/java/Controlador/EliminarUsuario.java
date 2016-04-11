@@ -5,9 +5,10 @@
  */
 package Controlador;
 
-
 import Modelo.Entidad.BeanConductor;
+import Modelo.Entidad.BeanUsuario;
 import Modelo.Entidad.DaoConductor;
+import Modelo.Entidad.DaoUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -21,8 +22,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author SHADY-
  */
-@WebServlet(name = "EliminarConductor", urlPatterns = {"/EliminarConductor"})
-public class EliminarConductor extends HttpServlet {
+@WebServlet(name = "EliminarUsuario", urlPatterns = {"/EliminarUsuario"})
+public class EliminarUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,12 +36,13 @@ public class EliminarConductor extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
         
-         Integer idconductor = Integer.parseInt(request.getParameter("idconductor"));
-        BeanConductor BConductor = new BeanConductor(idconductor);
+        
+         Integer idUsuario = Integer.parseInt(request.getParameter("idusuarios"));
+        BeanUsuario BUsuario = new BeanUsuario(idUsuario);
                 
-              DaoConductor DConductor=new DaoConductor(BConductor);
+        
+        DaoUsuario DUsuario=new DaoUsuario(BUsuario);
               ResultSet rs;
             
               String mExito="Operacion exitosa, Felicidades!!!!"; 
@@ -48,18 +50,39 @@ public class EliminarConductor extends HttpServlet {
          
          
            // Eliminar REGISTROS
-                if(DConductor.borrarRegistro()){
+                if(DUsuario.borrarRegistro()){
                     request.setAttribute("mensaje", "Registro ELIMINADO exitosamente");
                 }else{request.setAttribute("mensaje", "El registro no se pudo ELIMINAR");}
                 
-                request.getRequestDispatcher("VerConductor.jsp").forward(request, response);
+                request.getRequestDispatcher("ListaUsuarios.jsp").forward(request, response);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
     }
 
-        
-        
-  
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

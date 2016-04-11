@@ -10,7 +10,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stilos.css" type="text/css" />
+        <link rel="stylesheet" href="css/stilos.css" type="text/css" />
         <title>Transportes Urimar</title>
     </head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <img id="logo" alt="Trasportes Urimar" src="img/logo.jpg">
+                     <img id="logo" alt="Trasportes Urimar" src="img/banner4.jpg" width="100%" height="100%">
                     <div class="row">
                         <div class="col-md-12">
 
@@ -40,7 +40,7 @@
                                                     <li><a href="Contenedor.jsp">Transporte Contenedorizada</a></li>
 
                                                 </ul>
-                                            <li><a href="contacto.jsp"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</a></li>
+                                            <li><a href="Contacto.jsp"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</a></li>
 
                                         </ul>
                                     </div>

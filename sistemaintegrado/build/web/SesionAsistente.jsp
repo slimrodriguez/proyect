@@ -15,7 +15,7 @@
         <title>Transportes Urimar</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="stilos.css" rel="stylesheet">
+        <link href="css/stilos.css" rel="stylesheet">
 
         <% HttpSession sesion = request.getSession();
 
@@ -56,7 +56,7 @@
                                                     <li><a href="VerCamion.jsp">Lista camiones</a></li>
                                                     <li><a href="VerConductor.jsp">Lista conductores</a></li>
                                                 </ul>
-                                            <li ><a href="Viajes.html"><span class="glyphicon glyphicon-send"></span> Viajes</a></li>
+                                            <li ><a href="Viajes.jsp"><span class="glyphicon glyphicon-send"></span> Viajes</a></li>
 
 
                                         </ul>

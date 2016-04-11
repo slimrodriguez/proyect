@@ -19,7 +19,7 @@
 
 </head>
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="stilos.css" rel="stylesheet">
+<link href="css/stilos.css" rel="stylesheet">
 <body>
 
 <div class="container-fluid">

@@ -1,8 +1,9 @@
+<%-- 
+    Document   : MenuUsuarios
+    Created on : 03-abr-2016, 14:40:19
+    Author     : SHADY-
+--%>
 
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="Controlador.ClassConex"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,12 +21,10 @@
     <link href="css/stilos.css" rel="stylesheet">
     
     
-          <% HttpSession sesion = request.getSession();
+      <% HttpSession sesion = request.getSession();
     
      String usu= sesion.getAttribute("nombre").toString();
-             
-          
-             %>
+      %>
         
             
     <body>
@@ -51,14 +50,13 @@
                                                     <li><a href="CrearFactura.html">Facturacion</a></li>
                                                     <li><a href="ListadoFacturas.html">Listado de Facturas</a></li>
                                                 </ul>
-                                            <li><a href="EstadoCartera.html"><span class="glyphicon glyphicon-briefcase"></span>Mod Cartera</a></li>
+                                            <li><a href="EstadoCartera.jsp"><span class="glyphicon glyphicon-briefcase"></span>Mod Cartera</a></li>
                                             <li><a href="ConsultaPedidos.jsp"><span class="glyphicon glyphicon-globe"></span>Mod Pedidos </a></li>
                                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-info-sign"></span>Usuarios<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="MenuUsuarios.jsp">Tablas</a></li>
+                                                     <li><a href="MenuUsuarios.jsp">Tablas</a></li>
                                                     <li><a href="RegistrosGenerales.jsp">Registros</a></li>
                                                     <li><a href="ListaUsuarios.jsp">Lista usuarios</a></li>
-                                                       
 
                                                     </div>
 
@@ -80,82 +78,65 @@
                                                     </div>
                                                     </div>
                                                     <!---Aqui va el contenido de la pagina---->
-                                                    <h1>USUARIOS</h1>
-                                                    <br>
-                                                    <br>
                                                     
-                                <div>
-                               
-                                <h5>
-                                    <% if (request.getAttribute("mensaje") == "Registro ELIMINADO exitosamente") {%>
-
-                                   <font color="red">${mensaje}</font> 
-                                    <%} else
-                                     if (request.getAttribute("mensaje") == "Registro ACTUALIZADO exitosamente"){
-                                    %>
-                                    <font color="green">${mensaje}</font>
-                                    
-                                </h5>
-                              
-                              
-                            </div>
-                                   
-                              <%}%>
-                                                    <div class="table-responsive">
-                                                    <table class="table table-hover table table-striped">
-                <thead>
-                    
-                <th class="success"><center>IDENTIFICACION</center></th>
-                <th class="success"><center>USARIO</center></th>
-                <th class="success"><center>NOMBRE</center></th>
-                <th class="success"><center>ROL</center></th>
-                <th class="success"><center>CONTRASEÑA</center></th>
-               
-                <th class="success"><center>OPCIONES</center></th>
-                </thead>
-                <tbody>
-                    
-              <%  ClassConex con = new ClassConex();
-                Connection cn = con.ObtenerConexion(); 
-                
-                Statement stm = cn.createStatement();
-                String query = "select * from usuarios;";
-                 ResultSet rs = stm.executeQuery(query);         
-              %>      
-                 </thead>
-                <tbody>
-                    <%while (rs.next()) {%>
-                    <tr>
-                        
-                        <td> <center><%= rs.getString("id")%></center> </td>
-                        <td> <center><%= rs.getString("usuario")%> </center> </td>
-                        <td> <center><%= rs.getString("nombre")%></center> </td>
-                        <td> <center><%= rs.getString("rol")%></center> </td>
-                        <td> <center><%= rs.getString("pss")%></center> </td>
-                        
-                        <td> 
-                <center>
-                            <div>
-                                    <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizaUsuario.jsp?idusuarios=<%= rs.getInt("idusuarios")%>&&id=<%=rs.getString("id")%>&&usuario=<%=rs.getString("usuario")%>&&nombre=<%=rs.getString("nombre")%>&&rol=<%=rs.getString("rol")%>&&pss=<%=rs.getString("pss")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
-                                     <button type="button" class="btn btn-danger" onclick="confirm('Estas seguro de Eliminar el Registro'); location.reload(false)"> <a title="Eliminar" href="EliminarUsuario?idusuarios=<%=rs.getInt("idusuarios") %>" ><span class="glyphicon glyphicon-remove"></span></a> </button>
-                             </div>
-                </center>       
-                </td>
-                        
-                    </tr>   
-                   <% }%>
-                        
-               </tbody>
-            </table>
-           
-      </div>             
+                                                    <div class="container-fluid">
+	                                 <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center text-muted">
+				CONTROL DE DATOS
+			</h3>
+                    <br>
+                    <br>
+                    <br>
+			<div class="row">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-5">
+					<img alt="Bootstrap Image Preview" src="img/gestionusuarios.jpg" />
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								TABLAS
+							</h3>
+						</div>
+						<div class="panel-body">
+                                                    <a href="ListaUsuarios.jsp">LISTA DE USUARIOS</a> 
+						</div>
+                                            
+						<div class="panel-footer">
+                                                    <a href="ListaSolicitudes.jsp">LISTA DE SOLICITUDES</a> 
+						</div>
+                                                
+                                            
+                                                 <div class="panel-body">
+                                                    <a href="RegistrosGenerales.jsp">PEDIDOS</a> 
+						</div>
+                                            
+                                                <div class="panel-footer">
+                                                    <a href="TablaConductores.jsp">CONDUCTORES</a> 
+                                                    </div>
+                                            
+                                                 <div class="panel-body">
+                                                    <a href="RegistrosGenerales.jsp">VEHICULOS</a> 
+						</div>
+                                            
+                                            
+                                                <div class="panel-footer">
+                                                    <a href="RegistrosGenerales.jsp">REGISTRAR</a> 
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
-                   <br>
-                   <br>
-                   <br>
-                   <br>
-                   <br>
 
 
 
@@ -175,3 +156,4 @@
                                                     <script src="js/scripts.js"></script>
                                                     </body>
                                                     </html>
+

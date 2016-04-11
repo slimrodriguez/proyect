@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stilos.css" type="text/css" />
+        <link rel="stylesheet" href="css/stilos.css" type="text/css" />
         <title>Transportes Urimar</title>
 
 
@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <img id="logo" alt="Trasportes Urimar" src="img/logo.jpg">
+                    <img id="logo" alt="Trasportes Urimar" src="img/banner4.jpg" width="100%" height="100%">
                     <div class="row">
                         <div class="col-md-12">
 

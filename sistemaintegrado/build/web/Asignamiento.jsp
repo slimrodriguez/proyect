@@ -15,7 +15,7 @@
         <title>Transportes Urimar</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="stilos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/stilos.css" type="text/css" />
 
     </head>
 
@@ -121,11 +121,11 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <label for="text">Soat:</label>
-                                    <input type="date" class="form-control" name="soat"/>
+                                    <input type="date" class="form-control" name="soat" disabled>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="text">Tecnomecanica:</label>
-                                    <input type="date" class="form-control" name="tecnomecanica"/>
+                                    <input type="date" class="form-control" name="tecnomecanica" disabled="">
                                 </div>
                             </div>
 

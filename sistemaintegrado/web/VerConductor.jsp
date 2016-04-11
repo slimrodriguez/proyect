@@ -31,13 +31,13 @@
 
     </head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="stilos.css" rel="stylesheet">
+    <link href="css/stilos.css" rel="stylesheet">
     <body>
 
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <img id="logo" alt="Trasportes Urimar" src="img/logo.jpg">
+                     <img id="logo" alt="Trasportes Urimar" src="img/banner4.jpg" width="100%" height="100%">
                     <div class="row">
                         <div class="col-md-12">
 
@@ -97,7 +97,7 @@
             <br>
             <table class="table table-hover table-condensed table-bordered">
                 <thead>
-                <th>NUMERO CONDUCTOR</th>
+              
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
                 <th>CEDULA</th>
@@ -122,7 +122,7 @@
                 <tbody>
                     <%while (rs.next()) {%>
                     <tr>
-                        <td> <%= rs.getString("idconductores")%> </td>
+                       
                         <td> <%= rs.getString("nombre")%> </td>
                         <td> <%= rs.getString("apellido")%> </td>
                         <td> <%= rs.getString("cedula")%> </td>
@@ -135,8 +135,8 @@
                         <td>   
                     
                     
-                            <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizarConductor.jsp?idconductores=<%=rs.getInt("idconductores") %>&&nombre=<%= rs.getString("nombre")%>&&apellido=<%= rs.getString("apellido")%>&&cedula=<%= rs.getString("cedula")%>&&direccion=<%= rs.getString("direccion")%>&&telefono=<%= rs.getString("telefono")%>&&celular=<%= rs.getString("celular")%>&&categoria=<%= rs.getString("categoria")%>&&vencimiento=<%= rs.getString("vencimiento")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
-                            <button type="button" class="btn btn-danger" onclick="confirm('Estas seguro de Eliminar el Registro'); location.reload(false)"> <a title="Eliminar" href="EliminarConductor?idcliente=<%=rs.getInt("idconductores") %>" ><span class="glyphicon glyphicon-remove"></span></a> </button>
+                            <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizarConductor.jsp?idconductor=<%=rs.getInt("idconductor") %>&&nombre=<%= rs.getString("nombre")%>&&apellido=<%= rs.getString("apellido")%>&&cedula=<%= rs.getString("cedula")%>&&direccion=<%= rs.getString("direccion")%>&&telefono=<%= rs.getString("telefono")%>&&celular=<%= rs.getString("celular")%>&&categoria=<%= rs.getString("categoria")%>&&vencimiento=<%= rs.getString("vencimiento")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
+                            <button type="button" class="btn btn-danger" onclick="confirm('Estas seguro de Eliminar el Registro'); location.reload(false)"> <a title="Eliminar" href="EliminarConductor?idconductor=<%=rs.getInt("idconductor") %>" ><span class="glyphicon glyphicon-remove"></span></a> </button>
                             
                         </td>
                         

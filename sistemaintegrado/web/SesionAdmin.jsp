@@ -12,7 +12,7 @@
 
     </head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="stilos.css" rel="stylesheet">
+    <link href="css/stilos.css" rel="stylesheet">
     
     
       <% HttpSession sesion = request.getSession();
@@ -38,18 +38,18 @@
                                     </div>
                                     <div>
                                         <ul class="nav navbar-nav">
-                                            <li><a href="SesionJefeFac.html"><span class="glyphicon glyphicon-cog"></span>Configuraciones</a></li>
+                                            <li><a href="SesionJefeFac.jsp"><span class="glyphicon glyphicon-cog"></span>Configuraciones</a></li>
                                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-info-sign"></span> Mod Facturacion<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="CrearFactura.html">Facturacion</a></li>
-                                                    <li><a href="ListadoFacturas.html">Listado de Facturas</a></li>
+                                                    <li><a href="CrearFactura.jsp">Facturacion</a></li>
+                                                    <li><a href="ListadoFacturas.jsp">Listado de Facturas</a></li>
                                                 </ul>
-                                            <li><a href="EstadoCartera.html"><span class="glyphicon glyphicon-briefcase"></span>Mod Cartera</a></li>
+                                            <li><a href="EstadoCartera.jsp"><span class="glyphicon glyphicon-briefcase"></span>Mod Cartera</a></li>
                                             <li><a href="ConsultaPedidos.jsp"><span class="glyphicon glyphicon-globe"></span>Mod Pedidos </a></li>
                                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-info-sign"></span>Usuarios<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
+                                                    <li><a href="MenuUsuarios.jsp">Tablas</a></li>
                                                     <li><a href="RegistrosGenerales.jsp">Registros</a></li>
-                                                    <li><a href="ListaSolicitudes.jsp">Solicitudes</a></li>
                                                     <li><a href="ListaUsuarios.jsp">Lista usuarios</a></li>
                                                        
 

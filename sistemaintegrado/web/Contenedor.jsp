@@ -17,13 +17,13 @@
 
     </head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="stilos.css" rel="stylesheet">
+    <link href="css/stilos.css" rel="stylesheet">
     <body>
 
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <img id="logo" alt="Trasportes Urimar" src="img/logo.jpg">
+                     <img id="logo" alt="Trasportes Urimar" src="img/banner4.jpg" width="100%" height="100%">
                     <div class="row">
                         <div class="col-md-12">
 

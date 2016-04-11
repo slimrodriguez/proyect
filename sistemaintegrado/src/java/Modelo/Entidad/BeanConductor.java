@@ -7,7 +7,7 @@ package Modelo.Entidad;
  */
 public class BeanConductor {
     
-    private String idconductores; 
+    private Integer idconductor; 
     private String nombre;
     private String apellido;
     private String cedula;
@@ -16,9 +16,9 @@ public class BeanConductor {
     private String celular;
     private String categoria;
     private String vencimiento;
-    public BeanConductor(String idconductores,String nombre, String apellido, String cedula, String direccion, String telefono,String celular, String categoria, String vencimiento ) {
+    public BeanConductor(Integer idconductor,String nombre, String apellido, String cedula, String direccion, String telefono,String celular, String categoria, String vencimiento ) {
         
-        this.idconductores = idconductores;
+        this.idconductor = idconductor;
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -29,12 +29,16 @@ public class BeanConductor {
         this.celular = celular;
     }
 
-    public String getIdconductores() {
-        return idconductores;
+    public BeanConductor(Integer idconductor) {
+        this.idconductor = idconductor;
     }
 
-    public void setIdconductores(String idconductores) {
-        this.idconductores = idconductores;
+    public Integer getIdconductor() {
+        return idconductor;
+    }
+
+    public void setIdconductor(Integer idconductor) {
+        this.idconductor = idconductor;
     }
 
    

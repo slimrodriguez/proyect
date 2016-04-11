@@ -25,7 +25,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
     public boolean encontrado=false;
     public boolean listo = false;
     
-    public String idconductores;
+    public Integer idconductor;
     public String nombre="";
     public String apellido="";
     public String cedula="";
@@ -47,7 +47,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
             conn = this.ObtenerConexion();
             st = conn.createStatement();
             
-            idconductores = bconductor.getIdconductores(); 
+            idconductor = bconductor.getIdconductor(); 
             nombre    = bconductor.getNombre();
             apellido   = bconductor.getApellido();
             cedula  = bconductor.getCedula();
@@ -71,7 +71,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
 
     public boolean agregarRegistro() { //opcion 1.
         try {
-            st.executeUpdate("INSERT INTO Condutores (idconductores,nombre,apellido,cedula,direccion,telefono,celular,categoria,vencimiento)" + "values ("+idconductores+","+nombre+","+apellido+","+cedula+","+direccion+","+telefono+","+celular+","+categoria+","+vencimiento+");");
+            st.executeUpdate("INSERT INTO Condutores (nombre,apellido,cedula,direccion,telefono,celular,categoria,vencimiento)" + "values ("+nombre+","+apellido+","+cedula+","+direccion+","+telefono+","+celular+","+categoria+","+vencimiento+");");
             listo=true;
             System.out.print(st);
         } catch (SQLException ex) {
@@ -84,7 +84,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
     public boolean borrarRegistro() {// opcion 2.
         try {
             
-            st.executeUpdate("delete from Condutores where idconductores;");
+            st.executeUpdate("delete from Condutores where idconductor='"+idconductor+"';");
             listo=true;
             conn.close();
         } catch (SQLException ex) {
@@ -97,7 +97,7 @@ public class DaoConductor extends ClassConex implements  interfaceCRUD{
    
     public boolean actualizarRegistro() { //opcion 3.
         try {
-            st.executeUpdate("");
+            st.executeUpdate("UPDATE Condutores SET nombre="+nombre+",apellido="+apellido+",cedula="+cedula+",direccion="+direccion+",telefono="+telefono+",celular="+celular+",categoria="+categoria+",vencimiento="+vencimiento+" WHERE idconductor="+idconductor+"; ");
             listo=true;
            
         } catch (SQLException ex) {

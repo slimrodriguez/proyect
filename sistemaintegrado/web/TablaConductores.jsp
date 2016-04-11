@@ -1,3 +1,8 @@
+<%-- 
+    Document   : TablaConductores
+    Created on : 10-abr-2016, 20:16:26
+    Author     : SHADY-
+--%>
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -55,7 +60,7 @@
                                             <li><a href="ConsultaPedidos.jsp"><span class="glyphicon glyphicon-globe"></span>Mod Pedidos </a></li>
                                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-info-sign"></span>Usuarios<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="MenuUsuarios.jsp.jsp">Tablas</a></li>
+                                                    <li><a href="MenuUsuarios.jsp">Tablas</a></li>
                                                     <li><a href="RegistrosGenerales.jsp">Registros</a></li>
                                                     <li><a href="ListaUsuarios.jsp">Lista usuarios</a></li>
                                                        
@@ -80,12 +85,20 @@
                                                     </div>
                                                     </div>
                                                     <!---Aqui va el contenido de la pagina---->
-                                                    <h1>LISTADO DE SOLICITUDES</h1>
-                                                    <br>
-                                                    <br>
-                                                    <br>
-                                                    
-                                                     <div>
+                                                   
+                                                       <div class="container" >
+
+                       
+
+                        
+                        <br> </br>
+                      
+
+                        
+                          <h1 class="h1 text-center text-info"> CONDUCTORES </h1>
+            <br>
+            <br>
+               <div>
                                
                                 <h5>
                                     <% if (request.getAttribute("mensaje") == "Registro ELIMINADO exitosamente") {%>
@@ -100,21 +113,20 @@
                               
                               
                             </div>
-                                   
-                              <%}%>
-                                                    <div class="table-responsive">
-                                                    <table class="table table-hover table table-striped">
+                          <%}%>           
+            <table class="table table-hover table-striped ">
                 <thead>
-                    
-                <th class="success" >NOMBRE</th>
-                <th class="success">IDENTIFICACION</th>
+              
+                <th class="success">NOMBRE</th>
+                <th class="success">APELLIDO</th>
+                <th class="success">CEDULA</th>
                 <th class="success">DIRECCION</th>
                 <th class="success">TELEFONO</th>
-                <th class="success">EMAIL</th>
-                <th class="success">CONTACTO</th>
-                <th class="success">CONTRASEÑA</th>
+                <th class="success">CELULAR</th>
+                <th class="success">CATEGORIA</th>
+                <th class="success">VENCIMIENTO</th>
                 
-                <th class="success" >OPCIONES</th>
+                <th class="success">OPCIONES</th>
                 </thead>
                 <tbody>
                     
@@ -122,28 +134,28 @@
                 Connection cn = con.ObtenerConexion(); 
                 
                 Statement stm = cn.createStatement();
-                String query = "select * from clientes;";
+                String query = "select * from condutores ;";
                  ResultSet rs = stm.executeQuery(query);         
               %>      
                  </thead>
                 <tbody>
-                    <%while (rs.next()) {%>
+                    <% while (rs.next()) {%>
                     <tr>
-                        
+                       
                         <td> <%= rs.getString("nombre")%> </td>
-                        <td> <%= rs.getString("nit")%> </td>
+                        <td> <%= rs.getString("apellido")%> </td>
+                        <td> <%= rs.getString("cedula")%> </td>
                         <td> <%= rs.getString("direccion")%> </td>
                         <td> <%= rs.getString("telefono")%> </td>
-                        <td> <%= rs.getString("email")%> </td>
-                        <td> <%= rs.getString("contacto")%> </td>
-                        <td> <%= rs.getString("password")%> </td>
+                        <td> <%= rs.getString("celular")%> </td>
+                        <td> <%= rs.getString("categoria")%> </td>
+                        <td> <%= rs.getString("vencimiento")%> </td>
+                        
                         <td>   
                     
-                            
-                             
-                            <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizarEmpresa.jsp?idcliente=<%=rs.getInt("idcliente") %>&&nombre=<%= rs.getString("nombre")%>&&nit=<%= rs.getString("nit")%>&&direccion=<%= rs.getString("direccion")%>&&telefono=<%= rs.getString("telefono")%>&&email=<%= rs.getString("email")%>&&contacto=<%= rs.getString("contacto")%>&&password=<%= rs.getString("password")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
-                            <button type="button" class="btn btn-danger" onclick="confirm('Estas seguro de Eliminar el Registro'); location.reload(false)"> <a title="Eliminar" href="EliminarCliente?idcliente=<%=rs.getInt("idcliente") %>" ><span class="glyphicon glyphicon-remove"></span></a> </button>
-                               
+                    
+                            <button type="button" class="btn btn-default"> <a title="Editar" href="ActualizaConductor.jsp?idconductor=<%=rs.getInt("idconductor") %>&&nombre=<%= rs.getString("nombre")%>&&apellido=<%= rs.getString("apellido")%>&&cedula=<%= rs.getString("cedula")%>&&direccion=<%= rs.getString("direccion")%>&&telefono=<%= rs.getString("telefono")%>&&celular=<%= rs.getString("celular")%>&&categoria=<%= rs.getString("categoria")%>&&vencimiento=<%= rs.getString("vencimiento")%>"><span class="glyphicon glyphicon-pencil"></span></a> </button>
+                            <button type="button" class="btn btn-danger" onclick="confirm('Estas seguro de Eliminar el Registro'); location.reload(false)"> <a title="Eliminar" href="EliminarConductor?idconductor=<%=rs.getInt("idconductor") %>" ><span class="glyphicon glyphicon-remove"></span></a> </button>
                             
                         </td>
                         
@@ -153,8 +165,30 @@
                </tbody>
             </table>
            
-      </div>             
-                
+             
+                         
+             
+       
+        
+
+                        
+                    </div>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
 
                    <br>
                    <br>
@@ -166,17 +200,17 @@
 
 
 
-            <div class="row">
-                <div class="col-md-12">
-                    <img id="footer"  src="img/footer.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <img id="footer"  src="img/footer.png">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    </body>
-    </html>
+                                                    <script src="js/jquery.min.js"></script>
+                                                    <script src="js/bootstrap.min.js"></script>
+                                                    <script src="js/scripts.js"></script>
+                                                    </body>
+                                                    </html>

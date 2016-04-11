@@ -15,7 +15,7 @@
         <title>Transportes Urimar</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="stilos.css" rel="stylesheet">
+        <link href="css/stilos.css" rel="stylesheet">
 
     </head>
     <body>
@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <img id="logo" alt="Trasportes Urimar" src="img/logo.jpg">
+                     <img id="logo" alt="Trasportes Urimar" src="img/banner4.jpg" width="100%" height="100%">
                     <div class="row">
                         <div class="col-md-12">
 
@@ -75,13 +75,7 @@
                         <img src="img/perfil.jpg" style="float:right;"/>
 
                         <form   class="form-inline" role="form" method="post" action="ServletConductor">
-                            <div class="form-group">
-                                <label class="control-label">
-                                    <div class="col-xs-3">
-                                        Conductor nro:: <input class="form-control" type="text" name="idconductores" />
-                                    </div>
-                                </label>
-                            </div>
+                       
                             <div class="form-group">
                                 <label class="control-label">
                                     <div class="col-xs-3">

@@ -19,7 +19,7 @@
 
     </head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="stilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stilos.css" type="text/css" />
     
     
           <% HttpSession sesion = request.getSession();
@@ -91,17 +91,7 @@
                                                 <p> Registro de usuarios </p><br><br>
                                             </center>
                                             
-                                            <div class="alert alert-info fade in">
-                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                             <h5>
-                                            <% if (request.getAttribute("mensaje")!=null){%>
-
-                                            ${mensaje}
-
-                                            <%}%>
-                                            </h5>
-                                            
-                                            </div>
+                                          
 
                                             </font>
                                             <%

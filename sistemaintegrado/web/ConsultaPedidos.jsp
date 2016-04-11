@@ -32,7 +32,7 @@
 
     </head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="stilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stilos.css" type="text/css" />
     <body>
       <% if (usu!=null){%>
       

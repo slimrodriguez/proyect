@@ -21,8 +21,8 @@
     </head>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="stilos.css" type="text/css" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stilos.css" type="text/css" />
     
     
    <body>
@@ -48,32 +48,16 @@
 					</h3>
                                     
                                                    <br></br>
-                             <div class="alert alert-success fade in">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <center><h5>
-                                    <% if (request.getAttribute("mensaje") != null) {%>
-
-                                    ${mensaje}
-                                    
-                                </h5>
-                              </center>
-                              
-                            </div>
-                                    <center> 
-                                        <button type="button" class="btn btn-default ">
-                                            <a href="VerConductor.jsp"> Aceptar </a> 
-			                </button>
-                                    </center>
-                              <%}%>
+                            
                             
                               <%
                            
-                                if(Integer.parseInt(request.getParameter("idconductores"))!=0 && request.getParameter("nombre")!=null && request.getParameter("apellido") != null
+                                if(Integer.parseInt(request.getParameter("idconductor"))!=0 && request.getParameter("nombre")!=null && request.getParameter("apellido") != null
                                 && request.getParameter("cedula") != null && request.getParameter("direccion") != null
                                 && request.getParameter("telefono") != null && request.getParameter("celular") != null
                                 && request.getParameter("categoria") != null && request.getParameter("vencimiento") != null){
                                 
-                                session.setAttribute("idconductores", Integer.parseInt(request.getParameter("idconductores")));
+                                session.setAttribute("idconductor", Integer.parseInt(request.getParameter("idconductor")));
                            
                            %>
                              
@@ -81,11 +65,13 @@
                            
                            <br>
                            <br>
-                            <form   class="form-inline" role="form" method="post" action="ServletConductor">
+                            <form   class="form-inline" role="form" method="post" action="ActualizarConductor">
                             <div class="form-group">
                                 <label class="control-label">
                                     <div class="col-xs-3">
                                         Nombre: <input class="form-control" type="text" name="nombre" value="<%=request.getParameter("nombre")%>"/>
+                                        <input class="form-control" type="hidden" name="idconductor" value="<%=request.getParameter("idconductor")%>"/>
+                                        
                                     </div>
                                 </label>
                             </div>
@@ -165,7 +151,7 @@
 
                 <div class="form-group">
                     <div class="col-xs-offset-6 col-xs-6">
-                        <input type="submit" class="btn btn-default"  value="Actualizar ">
+                        <input type="submit" class="btn btn-default"  value="Actualizar">
                         <button type="button" class="btn btn-default"><a href="VerConductor.jsp">Cacelar</a></button>  
                         
                         

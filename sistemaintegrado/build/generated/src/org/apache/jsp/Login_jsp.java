@@ -57,7 +57,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n");
       out.write("    <link href=\"css/style.css\" rel=\"stylesheet\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"stilos.css\" type=\"text/css\" />\n");
+      out.write("    <link rel=\"stylesheet\" href=\"css/stilos.css\" type=\"text/css\" />\n");
       out.write("    <body>\n");
       out.write("\n");
       out.write("        <div class=\"container-fluid\">\n");

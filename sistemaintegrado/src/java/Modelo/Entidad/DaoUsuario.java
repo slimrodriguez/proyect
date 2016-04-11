@@ -35,17 +35,17 @@ public class DaoUsuario extends ClassConex implements  interfaceCRUD{
      *
      * @param cliente
      */
-    public DaoUsuario(BeanUsuario bcliente) {
+    public DaoUsuario(BeanUsuario bUsuario) {
         super();
         try {
             conn = this.ObtenerConexion();
             st = conn.createStatement();
-            
-            id     =  bcliente.getId();
-            usuario = bcliente.getUsuario();
-            nombre =  bcliente.getNombre();
-            rol =     bcliente.getRol();
-            pass =    bcliente.getPass();
+            idusuarios=bUsuario.getIdusuarios();
+            id     =  bUsuario.getId();
+            usuario = bUsuario.getUsuario();
+            nombre =  bUsuario.getNombre();
+            rol =     bUsuario.getRol();
+            pass =    bUsuario.getPass();
             
         } catch (SQLException ex) {
             Logger.getLogger(DaoUsuario.class.getName()).log(Level.SEVERE, null, ex);
@@ -74,7 +74,7 @@ public class DaoUsuario extends ClassConex implements  interfaceCRUD{
     public boolean borrarRegistro() {// opcion 2.
         try {
             
-            st.executeUpdate("delete from cliente where id_cliente='"+usuario+"';");
+            st.executeUpdate("delete from usuarios where idusuarios='"+idusuarios+"';");
             listo=true;
             conn.close();
         } catch (SQLException ex) {
